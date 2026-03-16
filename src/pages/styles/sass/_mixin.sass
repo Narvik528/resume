@@ -1,0 +1,16 @@
+//Шаблон для текста 
+@mixin style-text($type:"TT Travels", $size:14px, $color:black, $font-weight:700)
+    font-family: $type
+    color: $color
+    font-size: $size
+    font-weight: $font-weight
+@mixin font-face($font-family, $url, $weight)
+    @font-face 
+        font-family: $font-family 
+        src: url('#{$url}.woff') format('woff')
+        font-weight: $weight
+        font-style: normal
+
+    
+    
+    

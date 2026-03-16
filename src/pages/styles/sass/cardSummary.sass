@@ -1,0 +1,241 @@
+@import '_mixin.sass'
+@import '_variables'
+@import url('https://fonts.cdnfonts.com/css/tt-travels-trl')
+@include font-face('Inter', '../fonts/inter/Inter-Regular', 400)
+@include font-face('Inter-Medium', '../fonts/inter/Inter-Medium', 500)
+//Основной контент резюме
+.Summarry-Container
+    display: flex
+    height: 100%
+//иконка профиля
+.img-profile 
+    margin: 34px 0 0 60px  
+    z-index: 1
+    width: 150px
+    height: 150px
+//Блок основных данных резюме
+.Content-Container
+    position: absolute
+    width: 270px
+    height: 740px
+    top: 120px
+    left: 0px
+    background: $dark-gray
+    border-radius: 200px 200px 0 0
+//ФИО
+.text-NLM
+    padding: 70px 0 0 0
+    text-align: center
+    @include style-text($type: "TT Travels Trl", $size: 24px, $color: white, $font-weight: 600)
+//Разделитель контента в виде красных прямоугольников
+.personal-Container, .personal-qualities, .social-network
+    width: 270px
+    height: 47.34px
+    box-shadow: 0px 5px 20px 5px #711919
+    background: $gray-red
+    text-align: center
+    margin-top: 14px
+    p
+       @include style-text($type: "TT Travels Trl", $size: 22px, $color: white, $font-weight: 800)
+       padding: 12px 0 12px 0
+//Личные данные 
+.personal-age, .personal-telephone, .personal-email, .personal-city, .personal-home, .Purposeful, .Sociabl, .Responsible, .Attentive, .Creative
+    display: flex
+    align-items: center
+    gap: 10px
+    padding: 16px 0 0 8px
+    @include style-text($type: "Inter", $size: 16px , $color: white , $font-weight: 400)
+//Личные качества 
+.Purposeful, .Sociabl, .Responsible, .Attentive, .Creative
+    @include style-text($type: "Inter-Medium", $size: 16px , $color: white , $font-weight: 500)
+    padding: 16px 0 0 20px
+//Социальные сети 
+.social-networkIcon
+    display: flex 
+    justify-content: center
+    gap: 55px
+    padding-top: 20px
+//Заголовок карточки
+.title-Container
+    position: relative 
+    left: 5%
+    margin-top: 20px
+.title-img
+    display: flex
+    justify-content: center
+.titleEducation
+    position: relative
+    top: -60px
+    display: flex
+    justify-content: center
+    align-items: center
+    @include style-text($type:"TT Travels Trl", $size:30px, $color: white, $font-weight: bold)
+    img
+        padding: 0 14px 0 0
+//Полученное образование
+.education-Container
+    display: flex
+    justify-content: center
+.text-education
+    position: relative
+    border-top: 6px solid $gray-red
+    border-left: 76px solid $gray-red
+    padding: 5px 0 0 5px
+    @include style-text($type:"TT Travels Trl", $size:24px, $color: white, $font-weight: 500)
+.text-border
+    position: absolute
+    left: -12%
+    top: 10%
+    @include style-text($type:"Inter", $size:20px, $color: white, $font-weight: 400)
+    p
+       text-align: center
+//Описание навыков и языков (заголовки) 
+.title-Skills, .title-lang
+    position: relative
+    width: 652px
+    left: 12%
+    display: flex
+    padding-left: 50px
+    align-items: center
+    margin-top: 40px 
+    @include style-text($type:"TT Travels Trl", $size:22px, $color: white, $font-weight: bold)
+    border-bottom: 4px solid $gray-red
+.title-lang
+    margin-top: 20px 
+//Описание списка навыков и языков
+.Skills-list, .lang-skills
+    display: flex
+    align-items: center
+    gap: 20px
+    margin: 20px 0 0 115px
+.Skills
+    display: flex
+    gap: 30px
+.skill-name, .skill-progress, .lang-progress
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    gap: 15px
+    @include style-text($type:"Inter", $size:16px, $color: white, $font-weight: 400)
+    list-style-type: none
+.lang-name
+    display: flex
+    gap: 35px
+    @include style-text($type:"Inter", $size:16px, $color: white, $font-weight: 400)
+    ul
+        list-style-type: none
+.progress
+    width: 200px
+    height: 6px
+    background: #888282
+//Прогресс бары
+.HTML-bar, .BootStrap-bar, .CSS-bar, .React-bar, .JavaScript-bar, .Jquery-bar, .Java-bar, .Python-bar, 
+.Node-bar, .SQL-bar, .Russion-bar, .English-bar
+    width: 0px
+    height: 6px
+    z-index: 1
+    background: $dark-turquoise
+    transition: width 1s
+    align-self: flex-start
+//Дополнительно
+.main-Additionally
+    display: flex
+    gap: 80px
+.Additionally-Skills
+    display: flex
+    flex-direction: column
+    gap: 20px
+    margin: 40px 0 0 60px
+    @include style-text($type:"TT Travels Trl", $size:22px, $color: white, $font-weight: bold)
+.title-exp, .title-additionally
+    display: flex
+    align-items: center
+    border-bottom: 4px solid $gray-red
+.exp-Diagram, .additionally-program
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+@media (max-width: 1870px)
+    .Summarry-Container
+        flex-direction: column
+    .img-profile 
+        margin: 20px 0 0 0
+        width: 100%
+        display: flex
+        justify-content: center
+    .main-Content
+        display: flex
+        justify-content: center
+        margin-top: -70px
+    .Content-Container
+        position: static
+        margin-top: 0px
+    .title-Container
+        position: static
+        width: 100%
+        padding-top: 20px
+    .text-education
+        border-left: 56px solid $gray-red
+        font-size: 15px
+    .text-border
+        top: 5%
+        left: -52px
+        font-size: 16px
+    .title-Skills, .title-lang
+        position: static
+        justify-content: flex-start
+        margin: 20px 0 0 0
+    .Skills-list, .lang-skills
+        flex-direction: column
+        align-items: flex-start
+        margin: 20px 0 0 20px
+    .main-Additionally
+        flex-direction: column
+        gap: 20px
+    .Additionally-Skills
+        margin: 20px 0 0 0
+    .title-exp, .title-additionally
+        width: 652px
+        padding: 0 0 0 50px
+@media (min-width: 769px) and (max-width: 1199px)
+    .text-education
+        border-left: 56px solid $gray-red
+        font-size: 20px
+    .text-border
+        top: 5%
+        left: -56px
+        font-size: 18px
+    .Skills-list, .lang-skills
+        align-items: center
+@media (min-width: 1200px) and (max-width: 1870px)
+    .text-education
+        border-left: 56px solid $gray-red
+        font-size: 24px
+    .text-border
+        top: 15%
+        left: -52px
+        font-size: 16px
+    .title-Skills, .title-lang
+        margin: 0 0 0 0px
+        width: 55%
+    .Skills-list, .lang-skills
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        margin: 20px 0 0 20px
+    .main-Additionally
+        flex-direction: column
+        gap: 20px
+    .Additionally-Skills
+        margin: 20px 0 0 0
+    .title-exp, .title-additionally
+        width: 55%
+        padding: 0 0 0 50px
+
+
+
+
+
+    
+    

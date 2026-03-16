@@ -1,0 +1,100 @@
+@import '_mixin.sass'
+@import '_variables'
+@import url('https://fonts.cdnfonts.com/css/tt-travels-trl')
+@include font-face('Inter', '../fonts/inter/Inter-Regular', 400)
+
+//Заголовок страницы
+.titlePortfolio-img
+    display: flex
+    justify-content: center
+    margin-top: 40px
+.titlePortfolio
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    top: 50px
+    gap: 20px
+    @include style-text($type: "TT Travels Trl", $size: 30px, $color: white, $font-weight: 700)
+//Карточки на странице
+.works
+    display: flex
+    justify-content: space-around
+    flex-flow: wrap
+    margin-top: 60px
+    gap: 30px
+.name-work
+    display: flex
+    justify-content: center
+    padding-bottom: 10px
+    @include style-text($type: "TT Travels Trl", $size: 20px, $color: white, $font-weight: 700)
+.work-Container
+    box-sizing: border-box
+    border: 5px solid rgb(11, 90, 135)
+    border-radius: 20px  
+    width: 250px
+    height: 287.53px
+.work-img
+    display: flex
+    justify-content: center
+    padding: 10px 3px 0px 3px
+.Two-button
+    display: flex
+    justify-content: space-around
+    padding-top: 15px
+    @include style-text($type: "Inter", $size: 14px, $color: white, $font-weight: 400)
+.button-details, .button-go
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 5px
+    border-radius: 20px
+    width: 106.25px
+    height: 100%
+    background: $gray-red
+
+//Стили для всплывающих окон
+.popup-content 
+    background-color: $black-matte !important
+    width: 400px !important
+    height: 400px !important
+    border: 1px solid $black-matte !important
+    border-radius: 20px 0 20px 0
+//Описание контента в сплывающих окнах
+.diplome-topic, .diplome-description
+    @include style-text($type: "TT Travels Trl", $size: 20px, $color: white, $font-weight: 700)
+    display: flex
+    justify-content: center
+    p
+     border-bottom: 2px solid $gray-red
+.diplome-description
+    margin: 30px 0 30px 0
+.diplome-name
+    margin: 30px 0 0 40px 
+    border-left: 3px solid $gray-red
+    padding-left: 10px
+    @include style-text($type: "Inter", $size: 16px, $color: white, $font-weight: 400)
+.Diplome-status
+    list-style-type: disc
+    list-style-position: inside
+    @include style-text($type: "TT Travels Trl", $size: 17px, $color: white, $font-weight: 300)
+    span
+        @include style-text($type: "TT Travels Trl", $size: 16px, $color: white, $font-weight: 500)
+        color: $gray-red
+    li::marker
+       color: $gray-red
+       font-size: 20px
+.diplomeGo-Container, .minecraft-text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100%
+    text-align: center
+.go-text, .minecraft-text
+    @include style-text($type: "TT Travels Trl", $size: 20px, $color: white, $font-weight: 700)
+
+
+
+    
+        

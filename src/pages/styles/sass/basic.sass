@@ -1,0 +1,19 @@
+@import '_mixin.sass'
+@import '_variables'
+
+//Стили для фона страницы
+.basic-background 
+    height: 100vh
+    background: url("../img/background.jpg") no-repeat
+    background-size: cover
+    background-color: Silver
+@media (max-width: 960px)
+    .basic-background 
+        background: url("../img/background-mobile.png") no-repeat
+        background-size: cover
+        height: 100%
+        padding-bottom: 35px
+@media (min-width: 961px) and (max-width: 1870px)
+    .basic-background 
+        height: 100%
+        padding-bottom: 35px

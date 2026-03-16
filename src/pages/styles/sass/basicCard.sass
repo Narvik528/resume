@@ -1,0 +1,45 @@
+@import '_mixin.sass'
+@import '_variables'
+
+//Стили для фона карточки резюме
+.Card-Container
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+.Card-background
+    background-color: $black-matte
+    width: 62.5%
+    max-width: 1200px
+    height: 880px
+    border-radius: 50px 50px 0px 0px
+    transform: translateX(-150%)
+    animation: animatedCard 3s forwards
+//Стиль для не активной влкдаки слайдера, а также прозрачность и размер кружков
+.slick-dots li button:before
+    font-size: 18px !important
+    color: white !important 
+    opacity: 1 !important
+//Стиль для активной вкладке слайдера
+.slick-dots li.slick-active button:before
+    color: $gray-red !important
+//Настройка позиционарирования слайдера на странице
+.slick-dots li button
+    position: fixed
+    top: 100%
+    margin-top: 10px
+//Анимация при загрузки страницы
+@keyframes animatedCard
+    0%
+        transform: translateX(-150%)
+        
+    100%
+        transform: translateY(0)
+@media (max-width: 960px)
+    .Card-background
+        width: 100%
+        height: 100% 
+@media (min-width: 961px) and (max-width: 1870px)
+    .Card-background 
+        height: 100%
+        height: 100% 
